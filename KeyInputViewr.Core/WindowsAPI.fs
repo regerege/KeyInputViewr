@@ -32,6 +32,7 @@ KeyCode
 
 /// KeyHookに関するWindowsAPIの定義
 module internal WindowsAPI =
+//#region 構造体
     /// キーボードフック情報
     [<Struct; StructLayout(LayoutKind.Sequential)>]
     type KBDLLHOOKSTRUCT =
@@ -64,7 +65,9 @@ module internal WindowsAPI =
         val time        : uint32
         ///メッセージの拡張情報らしい
         val dwExtraInfo : nativeint
+//#endregion
     
+//#region コールバック関数
     /// <summary>
     /// SetWindowsHookEx 関数と共に使われる、アプリケーション定義またはライブラリ定義のコールバック関数です。新しいキーボード入力イベントをスレッドの入力キューへポストしようとするときに、システムは必ずこのフックプロシージャを呼び出します。キーボード入力を発生させるのは、ローカルのキーボードドライバまたは、 関数です。keybd_event を呼び出した場合、キー入力がエミュレートされ、特定のキーを押したのと同様のイベントが発生します。
     /// HOOKPROC 型は、このコールバック関数へのポインタを定義します。LowLevelKeyboardProc or LowLevelMouseProc はアプリケーション定義またはライブラリ定義の関数名のプレースホルダであり、実際にこの関数名を使う必要はありません。
@@ -78,7 +81,9 @@ module internal WindowsAPI =
     /// </returns>
 //    [<UnmanagedFunctionPointerAttribute(CallingConvention.Cdecl)>]
     type LowLevelProc = delegate of int * nativeint * nativeint -> nativeint
-    
+//#endregion
+
+//#region WindowsAPIのP/Invoke
     /// <summary>呼び出し側プロセスのアドレス空間に該当ファイルがマップされている場合、指定されたモジュール名のモジュールハンドルを返します。</summary>
     /// <param name="lpModuleName">
     /// ［入力］モジュール（.DLL または .EXE ファイル）の名前を保持する、NULL で終わる文字列へのポインタを指定します。拡張子を記述しなかった場合は、既定で「.DLL」が追加されます。文字列の最後に「.」を記述すると、拡張子なしのモジュール名になります。文字列には、パスを指定しなくてもかまいません。パスを指定する場合は、スラッシュ（/）ではなく円記号（\）で区切ってください。指定されたモジュール名を、呼び出し側プロセスのアドレス空間に現在マップされているモジュール名と比較します（ 大文字と小文字を区別しません）。
@@ -147,7 +152,7 @@ module internal WindowsAPI =
     /// 関数が成功すると、コピーされた文字列の文字数が返ります（ 終端の NULL 文字は含められません）。タイトルバーやテキストがない場合、タイトルバーが空の場合、および hWnd パラメータに指定したウィンドウハンドルまたはコントロールハンドルが無効な場合は 0 が返ります。拡張エラー情報を取得するには、 関数を使います。
     /// 他のアプリケーションのエディットコントロールのテキストをこの関数で取得することはできません。
     /// </returns>
-    [<DllImport("user32.dll", SetLastError = true)>]
+    [<DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)>]
     extern int GetWindowText(nativeint hWnd, StringBuilder lpString, int nMaxCount)
 
     /// <summary>指定されたウィンドウのタイトルバーテキストの文字数を返します（ そのウィンドウがタイトルバーを持つ場合）。指定したウィンドウがコントロールの場合は、コントロール内のテキストの文字数を返します。ただし、GetWindowTextLength 関数で他のアプリケーションのエディットコントロールのテキストの長さを取得することはできません。</summary>
@@ -171,7 +176,7 @@ module internal WindowsAPI =
     /// </param>
     /// <returns>ウィンドウを作成したスレッドの ID が返ります。</returns>
     [<DllImport("user32.dll", SetLastError = true)>]
-    extern int GetWindowThreadProcessId(nativeint hWnd, nativeint lpdwProcessId)
+    extern int GetWindowThreadProcessId(nativeint hWnd, int32& lpdwProcessId)
 
     /// <summary>256 個の仮想キーの状態を、指定されたバッファへコピーします。</summary>
     /// <param name="lpKeyState">［入力］すべての仮想キーの状態を保持する 256 バイトの配列へのポインタを指定します。</param>
@@ -197,7 +202,9 @@ module internal WindowsAPI =
     /// <returns>指定されたキーがデッドキーの場合、負の値が戻ります。それ以外の場合、次の値のいずれかが返ります。</returns>
     [<DllImport("user32.dll", SetLastError = true)>]
     extern bool ToAscii(uint32 uVirtKey, uint32 uScanCode, byte[] lpKeyState, byte[] lpChar, uint32 flags)
-    
+//#endregion
+
+//#region ポインタから構造体へのマーシャリング
     /// <summary>nativeintを構造体に変換</summary>
     /// <remarks>最も遅いやり方</remarks>
     /// <typeparam name="'T">構造体の型</typeparam>
@@ -214,13 +221,11 @@ module internal WindowsAPI =
     /// <param name="ptr">構造体のアンマネージポインタ</param>
     let inline toMSLLHOOKSTRUCT (ptr:nativeint) =
         toStructure<MSLLHOOKSTRUCT>(ptr) :?> MSLLHOOKSTRUCT
-        
+//#endregion
+
+//#region 便利関数？？
     /// <summary>指定したモジュールのインスタンスハンドルを返します。</summary>
     /// <param name="t">型</param>
-    let inline GetHInstance (t:Type) = Marshal.GetHINSTANCE(t.Module)
-//    let inline GetModule() =
-//        Assembly.GetExecutingAssembly().GetModules().[0]
-//        |> Marshal.GetHINSTANCE
     let inline GetModule() =
         System.Diagnostics.Process.GetCurrentProcess().MainModule.ModuleName
         |> GetModuleHandle
@@ -229,7 +234,7 @@ module internal WindowsAPI =
         if instance = IntPtr.Zero then
             let code = Marshal.GetLastWin32Error()
             raise <| new Win32Exception(code)
-
+//#endregion
 
 ///#region メッセージ定義
 
