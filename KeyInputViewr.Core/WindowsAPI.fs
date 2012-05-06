@@ -4,7 +4,7 @@
 open Microsoft.FSharp.NativeInterop
 open System
 open System.ComponentModel
-open System.Reflection
+open System.Diagnostics
 open System.Runtime.InteropServices
 open System.Text
 
@@ -290,3 +290,22 @@ module internal WindowsAPI =
     ///#endregion
 
 ///#endregion
+
+//#region フォアグラウンド、プロセス、タイトル
+    /// フォアグラウンドのウィンドウタイトル名を取得
+    let GetForegroundWindowText() =
+        let hwnd = GetForegroundWindow()
+        match GetWindowTextLength(hwnd) with
+        | 0 -> ""
+        | len ->
+            let sb = new StringBuilder(len)
+            GetWindowText(hwnd, sb, len) |> ignore
+            sb.ToString()
+            
+    /// フォアグラウンドのプロセスを取得
+    let GetForegroundProcess() =
+        let mutable pid = 0
+        let hwnd = GetForegroundWindow()
+        let tid = GetWindowThreadProcessId(hwnd, &pid)
+        Process.GetProcessById(pid)
+//#endregion

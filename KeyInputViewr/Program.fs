@@ -6,59 +6,22 @@ open System
 open System.Windows.Forms
 
 printfn "キーフックスタート"
-GlobalHook.KeyDown.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "KeyDown[%s]: %A" pn e.KeyCode
-    printfn "Shift: %A" e.Shift
-    printfn "Alt: %A" e.Alt
-    printfn "Control: %A" e.Control
-)
-GlobalHook.KeyPress.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "KeyPress[%s]: %A" pn e.KeyChar
-)
-GlobalHook.KeyUp.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "KeyUp[%s]: %A" pn e.KeyCode
-    printfn "Shift: %A" e.Shift
-    printfn "Alt: %A" e.Alt
-    printfn "Control: %A" e.Control
-)
-GlobalHook.MouseDown.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "MouseDown[%s]: %A" pn e.Button
-)
-//GlobalHook.MouseMove.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-//    printfn "MouseMove[%s]: %A" pn e
-//)
-GlobalHook.MouseUp.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "MouseUp[%s]: %A" pn e.Button
-)
-GlobalHook.MouseHWheel.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "MouseHWheel[%s]: %A" pn e.Delta
-)
-GlobalHook.MouseWWheel.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "MouseWWheel[%s]: %A" pn e.Delta
-)
-GlobalHook.MouseDoubleClick.Add(fun e ->
-//    let pn = GlobalHook.GetForegroundWindowText()
-    let pn = ""
-    printfn "MouseDoubleClick[%s]: %A" pn e.Button
+
+// フィルターの追加
+GlobalHook.Filter <-
+    Some
+        <| new HookFilterEvent(fun () -> [HookFilter.ProcessName "devenv"])
+// イベントの追加
+GlobalHook.KeyMouseEvent.Add(fun x ->
+    printfn "Key: %A" x.Key
+    printfn "KeyBit: %A" x.KeyBit
+    printfn "Mouse: %A" x.Mouse
+    printfn "Wheel: %A" x.Wheel
+    printfn ""
 )
 
 #if COMPILED
 [<STAThread>]
 do
-    Application.Run()
+    System.Windows.Forms.Application.Run()
 #endif

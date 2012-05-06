@@ -1,5 +1,17 @@
 /*
 /.*
 /*/
+bin/
+obj/
+
+!/KeyInputViewr/
+!/KeyInputViewr.Core/
 
 !/.gitignore
+!/README
+!*.sln
+!*.suo
+!*.fs
+!*.fsproj
+!*.snk
+!*.config

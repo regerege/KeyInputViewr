@@ -59,11 +59,11 @@
   <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <ItemGroup>
-    <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Program.fs" />
     <None Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Program.fs" />
     <None Include="KeyInputViewr.snk" />
   </ItemGroup>
   <ItemGroup>
@@ -75,7 +75,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KeyInputViewr.Core\KeyInputViewr.Core.fsproj">
       <Name>KeyInputViewr.Core</Name>
-      <Project>{b514e45e-efae-4d3d-969c-06a853b69977}</Project>
+      <Project>{4732e939-b929-4c5d-8d7e-1761bb8001a7}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>

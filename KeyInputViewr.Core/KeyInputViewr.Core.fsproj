@@ -71,6 +71,7 @@
     <Compile Include="Keys.fs" />
     <Compile Include="MouseButtons.fs" />
     <Compile Include="WindowsAPI.fs" />
+    <Compile Include="KeyMouseEvent.fs" />
     <Compile Include="GlobalHook.fs" />
     <None Include="KeyInputViewr.Core.snk" />
   </ItemGroup>
