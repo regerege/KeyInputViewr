@@ -365,12 +365,14 @@ type Keys =
     ///Unicode 文字がキーストロークであるかのように渡されます。Packet のキー値は、キーボード以外の入力手段に使用される 32 ビット仮想キー値の下位ワードです。
     | [<Literal>]Packet = 231
 
-    ///半角から全角に変換する際の仮想キーコード
-    | [<Literal>]ONJ = 233
-    ///全角から半角に変換する際の仮想キーコード
-    | [<Literal>]ONE = 234
+    ///CapsLock
+    | [<Literal>]OemCapsLock = 240
     ///カタカナひらがな
     | [<Literal>]KANA = 242
+    ///全角から半角に変換する際の仮想キーコード
+    | [<Literal>]ONE = 243
+    ///半角から全角に変換する際の仮想キーコード
+    | [<Literal>]ONJ = 244
 
     ///The ATTN key.
     | [<Literal>]Attn = 246

@@ -1,0 +1,2048 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="assembly=FSharpOnly"
+    Title="KeyboardMouseViewr for WPF" Name="KeyboardMouseViewrWPF"
+    Height="295" Width="960"
+    ResizeMode="NoResize" WindowStyle="None" Visibility="Visible">
+    <Grid IsHitTestVisible="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <!-- ======================================== 一段目 ======================================== -->
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="ESC" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Escape" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        
+        <Border Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F1" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="6" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F2" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F2" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F3" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F3" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="10" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F4" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F4" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        
+        <Border Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F5" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F5" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="15" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F6" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="17" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F7" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F7" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="19" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F8" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F8" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <Border Grid.Row="0" Grid.Column="22" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F9" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F9" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="24" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F10" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F10" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="26" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F11" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F11" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="28" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F12" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F12" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
+        <Border Grid.Row="0" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Print&#xd;&#xa;Screen"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Snapshot" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Scroll&#xd;&#xa;Lock"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Scroll" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Pause&#xd;&#xa;Break"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Pause" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ======================================== 一段目 ======================================== -->
+        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="半角&#xd;&#xa;全角"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_ONJ" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="1"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="2"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D2" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="3"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D3" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="4"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D4" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="10" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="5"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D5" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="12" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="6"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="14" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="7"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D7" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="16" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="8"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D8" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="18" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="9"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D9" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="20" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="0"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D0" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="22" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="=&#xd;&#xa;-"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemMinus" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="24" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="~&#xd;&#xa;^"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemQuotes" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="26" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="|&#xd;&#xa;\"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemPipe" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="28" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Back&#xd;&#xa;Space"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Back" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
+        <Border Grid.Row="2" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Insert"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Insert" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Home"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Home" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Page&#xd;&#xa;Up"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Prior" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
+        <Border Grid.Row="2" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Num&#xd;&#xa;Lock"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumLock" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="/"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Divide" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="*"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Multiply" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="44" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="-"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Subtract" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ======================================== 3段目 ======================================== -->
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Tab"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Tab" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Q"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Q" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="W"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_W" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="E"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_E" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="R"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_R" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="11" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="T"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_T" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="13" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Y"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Y" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="15" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="U"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_U" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="17" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="I"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_I" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="19" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="O"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_O" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="21" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="P"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_P" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="23" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="'&#xd;&#xa;@"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Oemtilde" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="25" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="｛&#xd;&#xa;]" />
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemOpenBrackets" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="28" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Enter"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Enter" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,76" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
+        <Border Grid.Row="3" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Delete"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Delete" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="End"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_End" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Page&#xd;&#xa;Down"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Next" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
+        <Border Grid.Row="3" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="7"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad7" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="8"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad8" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="9"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad9" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="44" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="+"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Add" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,76" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ======================================== 4段目 ======================================== -->
+        <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Caps Lock"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemCapsLock" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,66,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="A"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_A" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="S"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_S" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="D"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_D" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="F"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_F" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="G"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_G" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="13" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="H"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_H" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="15" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="J"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_J" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="17" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="K"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_K" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="19" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="L"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_L" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="21" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="+&#xd;&#xa;;"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Oemplus" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="23" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="*&#xd;&#xa;:"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Oem1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="25" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="}&#xd;&#xa;]"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Oem6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
+        <Border Grid.Row="4" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="4"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad4" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="5"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad5" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="6"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ======================================== 5段目 ======================================== -->
+        <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Shift"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_LShiftKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,96,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Z"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Z" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="X"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_X" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="C"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_C" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="10" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="V"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_V" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="12" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="B"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_B" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="14" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="N"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_N" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="16" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="M"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_M" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="18" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="&lt;&#xd;&#xa;,"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Oemcomma" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="20" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="&gt;&#xd;&#xa;."/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemPeriod" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="22" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="?&#xd;&#xa;/"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemQuestion" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="24" Grid.ColumnSpan="3" Margin="10,0,10,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="_&#xd;&#xa;\"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_OemBackslash" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="26" Grid.ColumnSpan="4" Margin="10,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Shift"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_RShiftKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,76,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
+        <Border Grid.Row="5" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="↑"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Up" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        
+        <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
+        <Border Grid.Row="5" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="1"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="2"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad2" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="3"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad3" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="44" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Enter"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Return" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,76" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ======================================== 6段目 ======================================== -->
+        <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Ctrl"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_LControlKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Win"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_LWin" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="3" Margin="0,0,5,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Alt"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_LMenu" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,51,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="7" Grid.ColumnSpan="4" Margin="15,0,-5,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="無変換"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_IMENonconvert" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,66,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="11" Grid.ColumnSpan="5" Margin="5,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="        "/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Space" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,91,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="16" Grid.ColumnSpan="3" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="変換"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_IMEConvert" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="19" Grid.ColumnSpan="3" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="KANA"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_KANA" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="22" Grid.ColumnSpan="3" Margin="0,0,5,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Alt"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_RMenu" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,51,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="25" Grid.ColumnSpan="2" Margin="-5,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Menu"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Apps" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,46,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="27" Grid.ColumnSpan="3" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="Ctrl"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_RControlKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
+        <Border Grid.Row="6" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="←"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Left" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="↓"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Down" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="→"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Right" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+
+        <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
+        <Border Grid.Row="6" Grid.Column="38" Grid.ColumnSpan="4" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content="0&#xd;&#xa;Ins"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_NumPad0" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,76,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+        <Border Grid.Row="6" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
+            <Border.Background>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <StackPanel>
+                            <Button Content=".&#xd;&#xa;Del"/>
+                        </StackPanel>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Child>
+                <Rectangle Name="rect_Decimal" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Border.Child>
+        </Border>
+    </Grid>
+</Window>

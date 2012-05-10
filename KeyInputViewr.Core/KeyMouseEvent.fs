@@ -3,19 +3,22 @@ open WindowsAPI
 
 /// フックフィルター
 type HookFilter =
-/// プロセス名
-| ProcessName of string
-| WindowTitle of string
+    /// プロセス名
+    | ProcessName of string
+    /// Windowタイトル名
+    | WindowTitle of string
+
 /// <summary>プロセス名またはウィンドウタイトルに完全一致したイベントを発行する。</summary>
 /// <returns>フック対象のフィルター一覧を返す。</returns>
 type HookFilterEvent = delegate of unit -> HookFilter list
 
+/// KeyHookライブラリ内のフックイベントを区別するための判別共用体
 type internal KeyMouseType =
-| AddKey of Keys
-| AddMouse of MouseButtons
-| DelKey of Keys
-| DelMouse of MouseButtons
-| Wheel of MouseWheel
+    | AddKey of Keys
+    | AddMouse of MouseButtons
+    | DelKey of Keys
+    | DelMouse of MouseButtons
+    | Wheel of MouseWheel
 
 open System.Collections
 
