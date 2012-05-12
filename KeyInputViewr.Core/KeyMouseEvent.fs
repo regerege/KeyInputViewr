@@ -14,9 +14,9 @@ type HookFilterEvent = delegate of unit -> HookFilter list
 
 /// KeyHookライブラリ内のフックイベントを区別するための判別共用体
 type internal KeyMouseType =
-    | AddKey of Keys
+    | AddKey of Keys * uint32
     | AddMouse of MouseButtons
-    | DelKey of Keys
+    | DelKey of Keys * uint32
     | DelMouse of MouseButtons
     | Wheel of MouseWheel
 
@@ -25,6 +25,7 @@ open System.Collections
 /// キーマウスの押下情報
 type KeyMouseEventArgs(key:Keys, mouse:MouseButtons, wheel:MouseWheel) =
     let mutable _key = key
+    let mutable _scanCode = 0u
     let mutable _mouse = mouse
     let mutable _wheel = wheel
     let _keybit = new BitArray(255)
@@ -32,6 +33,10 @@ type KeyMouseEventArgs(key:Keys, mouse:MouseButtons, wheel:MouseWheel) =
     member x.Key
         with get() = _key
 //        and internal set v = _key <- v
+    /// スキャンコード
+    member x.ScanCode
+        with get() = _scanCode
+        and set v = _scanCode <- v
     /// キーのビット表を取得する。
     member x.KeyBit
         with get() = _keybit

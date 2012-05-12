@@ -50,8 +50,12 @@ module GlobalHook =
     let private onKeyboardMouseHookEvent (kmt:KeyMouseType) =
         _args.Wheel <- MouseWheel.None
         match kmt with
-        | AddKey v -> _args.AddKey v
-        | DelKey v -> _args.DelKey v
+        | AddKey (v,s) ->
+            _args.AddKey v
+            _args.ScanCode <- s
+        | DelKey (v,s) ->
+            _args.DelKey v
+            _args.ScanCode <- s
         | AddMouse v -> _args.AddMouse v
         | DelMouse v -> _args.DelMouse v
         | Wheel v -> _args.Wheel <- v
@@ -72,20 +76,14 @@ module GlobalHook =
             Debug.WriteLine <| new String('-', 50)
             Debug.WriteLine ""
             
+            let keycode = enum<Keys> <| int key.vkCode
+
             // KeyDownイベントを発行
             if msg = WindowsAPI.WM_KEYDOWN || msg = WindowsAPI.WM_SYSKEYDOWN then
-                key.vkCode
-                |> int
-                |> enum<Keys>
-                |> KeyMouseType.AddKey
-                |> onKeyboardMouseHookEvent
+                onKeyboardMouseHookEvent <| KeyMouseType.AddKey (keycode, key.scanCode)
             // KeyUpイベントを発行
-            if msg = WindowsAPI.WM_KEYUP then
-                key.vkCode
-                |> int
-                |> enum<Keys>
-                |> KeyMouseType.DelKey
-                |> onKeyboardMouseHookEvent
+            if msg = WindowsAPI.WM_KEYUP || msg = WindowsAPI.WM_SYSKEYUP then
+                onKeyboardMouseHookEvent <| KeyMouseType.DelKey (keycode, key.scanCode)
         WindowsAPI.CallNextHookEx(k_hook, nCode, wParam, lParam)
     let private keyboardHook = WindowsAPI.LowLevelProc(KeyboardHookProc)
 ///#endregion

@@ -1,11 +1,54 @@
 ﻿<Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="assembly=FSharpOnly"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
     Title="KeyboardMouseViewr for WPF" Name="KeyboardMouseViewrWPF"
-    Height="295" Width="960"
+    Height="295" Width="1000"
     ResizeMode="NoResize" WindowStyle="None" Visibility="Visible">
-    <Grid IsHitTestVisible="True">
+
+    <Window.Resources>
+        <Style x:Key="_BorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <VisualBrush>
+                        <VisualBrush.Visual>
+                            <StackPanel>
+                                <!--<ToggleButton Content="{Binding Tag,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Border}}}" />-->
+                                <!--<Button Content="none" />-->
+                                <ToggleButton Content="     "></ToggleButton>
+                            </StackPanel>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="_BorderStylePushed" TargetType="{x:Type Border}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <VisualBrush>
+                        <VisualBrush.Visual>
+                            <StackPanel>
+                                <!--<ToggleButton Content="{Binding Tag,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Border}}}" />-->
+                                <!--<Button Content="none" />-->
+                                <ToggleButton Content="     " IsChecked="True"></ToggleButton>
+                            </StackPanel>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="_childButtonStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="TextTrimming" Value="WordEllipsis" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="Silver">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="15" />
@@ -14,2035 +57,593 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="5" />
         </Grid.ColumnDefinitions>
 
-        <!-- ======================================== 一段目 ======================================== -->
-        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="ESC" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Escape" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        
-        <Border Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F1" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        <Border Grid.Row="0" Grid.Column="6" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F2" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F2" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        <Border Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F3" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F3" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        <Border Grid.Row="0" Grid.Column="10" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F4" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F4" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        
-        <Border Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F5" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F5" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        <Border Grid.Row="0" Grid.Column="15" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F6" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        <Border Grid.Row="0" Grid.Column="17" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F7" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F7" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
-        </Border>
-        <Border Grid.Row="0" Grid.Column="19" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F8" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F8" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <!-- ======================================== 1段目 ======================================== -->
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="0" Name="b_Escape">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Escape" Text="ESC" />
         </Border>
 
-        <Border Grid.Row="0" Grid.Column="22" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F9" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F9" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="16" Name="b_F1">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F1" Text="F1" />
         </Border>
-        <Border Grid.Row="0" Grid.Column="24" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F10" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F10" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="24" Name="b_F2">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F2" Text="F2" />
         </Border>
-        <Border Grid.Row="0" Grid.Column="26" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F11" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F11" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="32" Name="b_F3">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F3" Text="F3" />
         </Border>
-        <Border Grid.Row="0" Grid.Column="28" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F12" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F12" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="40" Name="b_F4">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F4" Text="F4" />
+        </Border>
+
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="52" Name="b_F5">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F5" Text="F5" />
+        </Border>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="60" Name="b_F6">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F6" Text="F6" />
+        </Border>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="68" Name="b_F7">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F7" Text="F7" />
+        </Border>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="76" Name="b_F8">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F8" Text="F8" />
+        </Border>
+
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="88" Name="b_F9">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F9" Text="F9" />
+        </Border>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="96" Name="b_F10">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F10" Text="F10" />
+        </Border>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="104" Name="b_F11">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F11" Text="F11" />
+        </Border>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="112" Name="b_F12">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F12" Text="F12" />
         </Border>
 
         <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
-        <Border Grid.Row="0" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Print&#xd;&#xa;Screen"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Snapshot" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="124" Name="b_Snapshot">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Snapshot" FontSize="10">
+        Print<LineBreak/>
+        Screen
+            </TextBlock>
         </Border>
-        <Border Grid.Row="0" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Scroll&#xd;&#xa;Lock"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Scroll" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="132" Name="b_Scroll">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Scroll" FontSize="10">
+        Scroll<LineBreak/>
+        Lock
+            </TextBlock>
         </Border>
-        <Border Grid.Row="0" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Pause&#xd;&#xa;Break"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Pause" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="140" Name="b_Pause">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Pause" FontSize="10">
+        Pause<LineBreak/>
+        Break
+            </TextBlock>
         </Border>
 
-        <!-- ======================================== 一段目 ======================================== -->
-        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="半角&#xd;&#xa;全角"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_ONJ" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <!-- ======================================== 2段目 ======================================== -->
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="0" Name="b_ONJ">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_ONJ" FontSize="10">
+        半角<LineBreak/>
+        全角
+            </TextBlock>
         </Border>
-        <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="1"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="8" Name="b_D1">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D1" Text="1" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="2"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D2" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="16" Name="b_D2">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D2" Text="2" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="3"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D3" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="24" Name="b_D3">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D3" Text="3" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="4"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D4" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="32" Name="b_D4">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D4" Text="4" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="10" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="5"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D5" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="40" Name="b_D5">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D5" Text="5" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="12" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="6"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="48" Name="b_D6">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D6" Text="6" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="14" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="7"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D7" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="56" Name="b_D7">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D7" Text="7" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="16" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="8"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D8" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="64" Name="b_D8">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D8" Text="8" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="18" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="9"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D9" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="72" Name="b_D9">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D9" Text="9" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="20" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="0"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D0" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="80" Name="b_D0">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D0" Text="0" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="22" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="=&#xd;&#xa;-"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemMinus" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="88" Name="b_OemMinus">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemMinus" FontSize="10">
+        =<LineBreak />
+        -
+            </TextBlock>
         </Border>
-        <Border Grid.Row="2" Grid.Column="24" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="~&#xd;&#xa;^"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemQuotes" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="96" Name="b_OemQuotes">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemQuotes" FontSize="10">
+        ~<LineBreak />
+        ^
+            </TextBlock>
         </Border>
-        <Border Grid.Row="2" Grid.Column="26" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="|&#xd;&#xa;\"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemPipe" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="104" Name="b_OemPipe">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemPipe" FontSize="10">
+        |<LineBreak/>
+        \
+            </TextBlock>
         </Border>
-        <Border Grid.Row="2" Grid.Column="28" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Back&#xd;&#xa;Space"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Back" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="112" Name="b_Back">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Back" FontSize="10">
+        Back<LineBreak/>
+        Space
+            </TextBlock>
         </Border>
 
         <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
-        <Border Grid.Row="2" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Insert"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Insert" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="124" Name="b_Insert">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Insert" FontSize="10" Text="Insert" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Home"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Home" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="132" Name="b_Home">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Home" FontSize="10" Text="Home" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Page&#xd;&#xa;Up"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Prior" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="140" Name="b_Prior">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Prior" FontSize="10" Text="Page&#xd;&#xa;Up" />
         </Border>
 
         <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
-        <Border Grid.Row="2" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Num&#xd;&#xa;Lock"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumLock" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="152" Name="b_NumLock">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumLock" FontSize="10" Text="Num&#xd;&#xa;Lock" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="/"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Divide" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="160" Name="b_Divide">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Divide" Text="/" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="*"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Multiply" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="168" Name="b_Multiply">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Multiply" Text="*" />
         </Border>
-        <Border Grid.Row="2" Grid.Column="44" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="-"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Subtract" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="2" Grid.Column="176" Name="b_Subtract">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Subtract" Text="-" />
         </Border>
 
         <!-- ======================================== 3段目 ======================================== -->
-        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Tab"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Tab" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="3" Grid.Column="0" Name="b_Tab">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Tab" Text="Tab" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Q"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Q" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="12" Name="b_Q">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Q" Text="Q" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="W"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_W" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="20" Name="b_W">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_W" Text="W" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="E"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_E" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="28" Name="b_E">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_E" Text="E" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="R"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_R" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="36" Name="b_R">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_R" Text="R" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="11" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="T"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_T" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="44" Name="b_T">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_T" Text="T" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="13" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Y"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Y" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="52" Name="b_Y">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Y" Text="Y" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="15" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="U"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_U" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="60" Name="b_U">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_U" Text="U" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="17" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="I"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_I" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="68" Name="b_I">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_I" Text="I" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="19" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="O"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_O" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="76" Name="b_O">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_O" Text="O" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="21" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="P"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_P" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="84" Name="b_P">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_P" Text="P" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="23" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="'&#xd;&#xa;@"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Oemtilde" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="92" Name="b_Oemtilde">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Oemtilde" FontSize="10" Text="'&#xd;&#xa;@" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="25" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="｛&#xd;&#xa;]" />
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemOpenBrackets" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="100" Name="b_OemOpenBrackets">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemOpenBrackets" FontSize="10" Text="｛&#xd;&#xa;]" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="28" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Enter"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Enter" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,76" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.RowSpan="2" Grid.ColumnSpan="10" Grid.Row="3" Grid.Column="110" Name="b_Enter">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Enter" Text="Enter" />
         </Border>
 
         <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
-        <Border Grid.Row="3" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Delete"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Delete" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="124" Name="b_Delete">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Delete" FontSize="10" Text="Delete" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="End"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_End" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="132" Name="b_End">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_End" FontSize="10" Text="End" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Page&#xd;&#xa;Down"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Next" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="140" Name="b_Next">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Next" FontSize="10" Text="Page&#xd;&#xa;Down" />
         </Border>
 
         <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
-        <Border Grid.Row="3" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="7"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad7" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="152" Name="b_NumPad7">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad7" Text="7" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="8"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad8" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="160" Name="b_NumPad8">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad8" Text="8" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="9"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad9" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="168" Name="b_NumPad9">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad9" Text="9" />
         </Border>
-        <Border Grid.Row="3" Grid.Column="44" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="+"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Add" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,76" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.RowSpan="2" Grid.ColumnSpan="8" Grid.Row="3" Grid.Column="176" Name="b_Add">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Add" Text="+" />
         </Border>
 
         <!-- ======================================== 4段目 ======================================== -->
-        <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Caps Lock"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemCapsLock" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,66,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="14" Grid.Row="4" Grid.Column="0" Name="b_OemCapsLock">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemCapsLock" FontSize="11" Text="Caps Lock" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="A"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_A" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="14" Name="b_A">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_A" Text="A" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="S"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_S" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="22" Name="b_S">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_S" Text="S" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="D"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_D" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="30" Name="b_D">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_D" Text="D" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="F"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_F" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="38" Name="b_F">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_F" Text="F" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="G"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_G" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="46" Name="b_G">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_G" Text="G" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="13" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="H"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_H" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="54" Name="b_H">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_H" Text="H" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="15" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="J"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_J" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="62" Name="b_J">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_J" Text="J" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="17" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="K"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_K" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="70" Name="b_K">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_K" Text="K" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="19" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="L"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_L" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="78" Name="b_L">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_L" Text="L" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="21" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="+&#xd;&#xa;;"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Oemplus" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="86" Name="b_Oemplus">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Oemplus" Text="+&#xd;&#xa;;" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="23" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="*&#xd;&#xa;:"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Oem1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="94" Name="b_Oem1">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Oem1" FontSize="10" Text="*&#xd;&#xa;:" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="25" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="}&#xd;&#xa;]"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Oem6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="102" Name="b_Oem6">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Oem6" FontSize="10" Text="}&#xd;&#xa;]" />
         </Border>
 
         <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
-        <Border Grid.Row="4" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="4"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad4" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="152" Name="b_NumPad4">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad4" Text="4" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="5"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad5" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="160" Name="b_NumPad5">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad5" Text="5" />
         </Border>
-        <Border Grid.Row="4" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="6"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad6" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="4" Grid.Column="168" Name="b_NumPad6">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad6" Text="6" />
         </Border>
 
         <!-- ======================================== 5段目 ======================================== -->
-        <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Shift"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_LShiftKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,96,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="18" Grid.Row="5" Grid.Column="0" Name="b_LShiftKey">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_LShiftKey" Text="Shift" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Z"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Z" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="18" Name="b_Z">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Z" Text="Z" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="X"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_X" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="26" Name="b_X">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_X" Text="X" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="C"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_C" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="34" Name="b_C">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_C" Text="C" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="10" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="V"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_V" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="42" Name="b_V">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_V" Text="V" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="12" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="B"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_B" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="50" Name="b_B">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_B" Text="B" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="14" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="N"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_N" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="58" Name="b_N">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_N" Text="N" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="16" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="M"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_M" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="66" Name="b_M">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_M" Text="M" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="18" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="&lt;&#xd;&#xa;,"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Oemcomma" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="74" Name="b_Oemcomma">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Oemcomma" FontSize="10">
+        &lt;<LineBreak/>
+        ,
+            </TextBlock>
         </Border>
-        <Border Grid.Row="5" Grid.Column="20" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="&gt;&#xd;&#xa;."/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemPeriod" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="82" Name="b_OemPeriod">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemPeriod" FontSize="10">
+        &gt;<LineBreak/>
+        .
+            </TextBlock>
         </Border>
-        <Border Grid.Row="5" Grid.Column="22" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="?&#xd;&#xa;/"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemQuestion" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="90" Name="b_OemQuestion">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemQuestion" FontSize="10">
+        ?<LineBreak/>
+        /
+            </TextBlock>
         </Border>
-        <Border Grid.Row="5" Grid.Column="24" Grid.ColumnSpan="3" Margin="10,0,10,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="_&#xd;&#xa;\"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_OemBackslash" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="98" Name="b_OemBackslash">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_OemBackslash" FontSize="10">
+        _<LineBreak/>
+        \
+            </TextBlock>
         </Border>
-        <Border Grid.Row="5" Grid.Column="26" Grid.ColumnSpan="4" Margin="10,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Shift"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_RShiftKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,76,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="14" Grid.Row="5" Grid.Column="106" Name="b_RShiftKey">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_RShiftKey" Text="Shift" />
         </Border>
 
         <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
-        <Border Grid.Row="5" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="↑"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Up" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="132" Name="b_Up">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Up" Text="↑" />
         </Border>
-        
+
         <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
-        <Border Grid.Row="5" Grid.Column="38" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="1"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad1" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="152" Name="b_NumPad1">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad1" Text="1" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="40" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="2"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad2" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="160" Name="b_NumPad2">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad2" Text="2" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="3"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad3" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="168" Name="b_NumPad3">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad3" Text="3" />
         </Border>
-        <Border Grid.Row="5" Grid.Column="44" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Enter"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Return" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,76" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.RowSpan="2" Grid.ColumnSpan="8" Grid.Row="5" Grid.Column="176" Name="b_Return">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Return" FontSize="10" Text="Enter" />
         </Border>
 
         <!-- ======================================== 6段目 ======================================== -->
-        <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Ctrl"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_LControlKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="6" Grid.Column="0" Name="b_LControlKey">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_LControlKey" Text="Ctrl" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Win"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_LWin" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="6" Grid.Column="12" Name="b_LWin">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_LWin" Text="Win" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="3" Margin="0,0,5,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Alt"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_LMenu" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,51,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="6" Grid.Column="20" Name="b_LMenu">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_LMenu" Text="Alt" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="7" Grid.ColumnSpan="4" Margin="15,0,-5,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="無変換"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_IMENonconvert" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,66,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="6" Grid.Column="32" Name="b_IMENonconvert">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_IMENonconvert" Text="無変換" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="11" Grid.ColumnSpan="5" Margin="5,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="        "/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Space" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,91,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="20" Grid.Row="6" Grid.Column="44" Name="b_Space">
         </Border>
-        <Border Grid.Row="6" Grid.Column="16" Grid.ColumnSpan="3" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="変換"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_IMEConvert" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="6" Grid.Column="64" Name="b_IMEConvert">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_IMEConvert" Text="変換" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="19" Grid.ColumnSpan="3" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="KANA"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_KANA" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="6" Grid.Column="76" Name="b_KANA">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_KANA" Text="KANA" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="22" Grid.ColumnSpan="3" Margin="0,0,5,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Alt"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_RMenu" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,51,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="6" Grid.Column="88" Name="b_RMenu">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_RMenu" Text="Alt" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="25" Grid.ColumnSpan="2" Margin="-5,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Menu"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Apps" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,46,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="6" Grid.Column="100" Name="b_Apps">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Apps" FontSize="10" Text="Menu" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="27" Grid.ColumnSpan="3" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="Ctrl"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_RControlKey" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,56,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="12" Grid.Row="6" Grid.Column="108" Name="b_RControlKey">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_RControlKey" Text="Ctrl" />
         </Border>
 
         <!-- ☆☆☆☆☆ 操作キー ☆☆☆☆☆ -->
-        <Border Grid.Row="6" Grid.Column="31" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="←"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Left" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="6" Grid.Column="124" Name="b_Left">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Left" Text="←" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="33" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="↓"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Down" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="6" Grid.Column="132" Name="b_Down">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Down" Text="↓" />
         </Border>
-        <Border Grid.Row="6" Grid.Column="35" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="→"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Right" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="6" Grid.Column="140" Name="b_Right">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Right" Text="→" />
         </Border>
 
         <!-- ☆☆☆☆☆ テンキー ☆☆☆☆☆ -->
-        <Border Grid.Row="6" Grid.Column="38" Grid.ColumnSpan="4" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content="0&#xd;&#xa;Ins"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_NumPad0" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,76,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="16" Grid.Row="6" Grid.Column="152" Name="b_NumPad0">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_NumPad0" FontSize="10">
+                0<LineBreak/>
+                Ins
+            </TextBlock>
         </Border>
-        <Border Grid.Row="6" Grid.Column="42" Grid.ColumnSpan="2" Margin="0,0,0,0">
-            <Border.Background>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <StackPanel>
-                            <Button Content=".&#xd;&#xa;Del"/>
-                        </StackPanel>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Border.Background>
-            <Border.Child>
-                <Rectangle Name="rect_Decimal" Margin="2,2,0,0" Fill="#64FF0000" Visibility="Hidden">
-                    <Rectangle.Clip>
-                        <RectangleGeometry Rect="0,0,36,36" RadiusX="3" RadiusY="3"></RectangleGeometry>
-                    </Rectangle.Clip>
-                </Rectangle>
-            </Border.Child>
+        <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="6" Grid.Column="168" Name="b_Decimal">
+            <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Decimal" FontSize="10">
+                .<LineBreak/>
+                Del
+            </TextBlock>
         </Border>
     </Grid>
 </Window>

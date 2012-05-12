@@ -67,8 +67,6 @@
     <Compile Include="KeyboardMouseViewrWPF.xaml.fs" />
     <Compile Include="Program.fs" />
     <None Include="KeyInputViewr.snk" />
-    <Resource Include="keyboard_ja.png" />
-    <Resource Include="esc.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
