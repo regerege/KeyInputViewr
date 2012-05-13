@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     Title="KeyboardMouseViewr for WPF" Name="KeyboardMouseViewrWPF"
-    Height="295" Width="1000"
+    Height="260" Width="1075"
     ResizeMode="NoResize" WindowStyle="None" Visibility="Visible">
 
     <Window.Resources>
@@ -244,8 +244,20 @@
             <ColumnDefinition Width="5" />
             <ColumnDefinition Width="5" />
             <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
+        <Image Grid.RowSpan="7" Grid.Column="184" Source="/KeyInputViewr;component/mouse.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_b_Left"     Visibility="Hidden" Source="/KeyInputViewr;component/mouse_L.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_b_Right"    Visibility="Hidden" Source="/KeyInputViewr;component/mouse_R.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_b_Middle"   Visibility="Hidden" Source="/KeyInputViewr;component/mouse_wheel.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_b_XButton1" Visibility="Hidden" Source="/KeyInputViewr;component/mouse_XButton1.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_b_XButton2" Visibility="Hidden" Source="/KeyInputViewr;component/mouse_XButton2.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_h_Top"      Visibility="Hidden" Source="/KeyInputViewr;component/mouse_wheel_T.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_h_Rigth"    Visibility="Hidden" Source="/KeyInputViewr;component/mouse_wheel_R.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_h_Bottom"   Visibility="Hidden" Source="/KeyInputViewr;component/mouse_wheel_B.png" />
+        <Image Grid.RowSpan="7" Grid.Column="184" Name="img_h_Left"     Visibility="Hidden" Source="/KeyInputViewr;component/mouse_wheel_L.png" />
+        
         <!-- ======================================== 1段目 ======================================== -->
         <Border Style="{StaticResource _BorderStyle}" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="0" Name="b_Escape">
             <TextBlock Style="{StaticResource _childButtonStyle}" Name="tb_Escape" Text="ESC" />

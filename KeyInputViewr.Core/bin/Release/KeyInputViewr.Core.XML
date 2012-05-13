@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>KeyInputViewr.Core</name></assembly>
+<members>
+<member name="T:KeyInputViewr.Core.HookFilter.WindowTitle">
+<summary>
+ Windowタイトル名
+</summary>
+</member>
+<member name="T:KeyInputViewr.Core.HookFilter.ProcessName">
+<summary>
+ プロセス名
+</summary>
+</member>
+<member name="T:KeyInputViewr.Core.HookFilter">
+<summary>
+ フックフィルター
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:KeyInputViewr.Core.HookFilterEvent">
+ <summary>プロセス名またはウィンドウタイトルに完全一致したイベントを発行する。</summary>
+ <returns>フック対象のフィルター一覧を返す。</returns>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.Wheel(KeyInputViewr.Core.MouseWheel)">
+<summary>
+ ホイールの回転数を取得する。
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.ScanCode(System.UInt32)">
+<summary>
+ スキャンコード
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.Mouse(KeyInputViewr.Core.MouseButtons)">
+<summary>
+ マウスボタンを取得する。
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.Wheel">
+<summary>
+ ホイールの回転数を取得する。
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.ScanCode">
+<summary>
+ スキャンコード
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.Mouse">
+<summary>
+ マウスボタンを取得する。
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.KeyBit">
+<summary>
+ キーのビット表を取得する。
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.KeyMouseEventArgs.Key">
+<summary>
+ キーを取得する。
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:KeyInputViewr.Core.KeyMouseEventArgs">
+<summary>
+ キーマウスの押下情報
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:KeyInputViewr.Core.KeyMouseType">
+<summary>
+ KeyHookライブラリ内のフックイベントを区別するための判別共用体
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemClear">
+<summary>
+Clear キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Pa1">
+<summary>
+PA1 キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NoName">
+<summary>
+今後使用するために予約されている定数
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Zoom">
+<summary>
+The ZOOM key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Play">
+<summary>
+The PLAY key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.EraseEof">
+<summary>
+EraseEof キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Exsel">
+<summary>
+Exsel キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Crsel">
+<summary>
+Crsel キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Attn">
+<summary>
+The ATTN key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.ONJ">
+<summary>
+半角から全角に変換する際の仮想キーコード
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.ONE">
+<summary>
+全角から半角に変換する際の仮想キーコード
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.KANA">
+<summary>
+カタカナひらがな
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemCapsLock">
+<summary>
+CapsLock
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Packet">
+<summary>
+Unicode 文字がキーストロークであるかのように渡されます。Packet のキー値は、キーボード以外の入力手段に使用される 32 ビット仮想キー値の下位ワードです。
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.ProcessKey">
+<summary>
+ProcessKey キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemBackslash">
+<summary>
+RT 102 キーのキーボード上の OEM 山かっこキーまたは円記号キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem102">
+<summary>
+The OEM 102 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem8">
+<summary>
+The OEM 8 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemQuotes">
+<summary>
+米国標準キーボード上の OEM 一重/二重引用符キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem7">
+<summary>
+The OEM 7 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemCloseBrackets">
+<summary>
+米国標準キーボード上の OEM 右角かっこキー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem6">
+<summary>
+The OEM 6 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem5">
+<summary>
+The OEM 5 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemPipe">
+<summary>
+米国標準キーボード上の OEM Pipe キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemOpenBrackets">
+<summary>
+米国標準キーボード上の OEM 左角かっこキー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem4">
+<summary>
+The OEM 4 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem3">
+<summary>
+The OEM 3 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oemtilde">
+<summary>
+米国標準キーボード上の OEM ティルダ キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem2">
+<summary>
+The OEM 2 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemQuestion">
+<summary>
+米国標準キーボード上の OEM 疑問符キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemPeriod">
+<summary>
+国または地域別キーボード上の OEM ピリオド キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemMinus">
+<summary>
+国または地域別キーボード上の OEM マイナス キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oemcomma">
+<summary>
+国または地域別キーボード上の OEM コンマ キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oemplus">
+<summary>
+国または地域別キーボード上の OEM プラス キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.OemSemicolon">
+<summary>
+米国標準キーボード上の OEM セミコロン キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Oem1">
+<summary>
+The OEM 1 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LaunchApplication2">
+<summary>
+カスタム ホット キー 2 (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LaunchApplication1">
+<summary>
+カスタム ホット キー 1 (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.SelectMedia">
+<summary>
+メディア キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LaunchMail">
+<summary>
+メール ホット キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.MediaPlayPause">
+<summary>
+再生/一時停止キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.MediaStop">
+<summary>
+停止キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.MediaPreviousTrack">
+<summary>
+前のトラック キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.MediaNextTrack">
+<summary>
+次のトラック キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.VolumeUp">
+<summary>
+音量 + キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.VolumeDown">
+<summary>
+音量 - キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.VolumeMute">
+<summary>
+ミュート キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.BrowserHome">
+<summary>
+ホーム キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.BrowserFavorites">
+<summary>
+お気に入りキー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.BrowserSearch">
+<summary>
+検索キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.BrowserStop">
+<summary>
+中止キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.BrowserRefresh">
+<summary>
+更新キー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.BrowserForward">
+<summary>
+進むキー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.BrowserBack">
+<summary>
+戻るキー (Windows 2000 以降)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.RMenu">
+<summary>
+右の Alt キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LMenu">
+<summary>
+左の Alt キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.RControlKey">
+<summary>
+右の Ctrl キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LControlKey">
+<summary>
+左の Ctrl キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.RShiftKey">
+<summary>
+右の Shift キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LShiftKey">
+<summary>
+左の Shift キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Scroll">
+<summary>
+ScrollLock キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumLock">
+<summary>
+The NUM LOCK key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F24">
+<summary>
+The F24 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F23">
+<summary>
+The F23 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F22">
+<summary>
+The F22 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F21">
+<summary>
+The F21 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F20">
+<summary>
+The F20 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F19">
+<summary>
+The F19 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F18">
+<summary>
+The F18 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F17">
+<summary>
+The F17 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F16">
+<summary>
+The F16 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F15">
+<summary>
+The F15 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F14">
+<summary>
+The F14 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F13">
+<summary>
+The F13 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F12">
+<summary>
+The F12 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F11">
+<summary>
+The F11 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F10">
+<summary>
+The F10 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F9">
+<summary>
+The F9 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F8">
+<summary>
+The F8 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F7">
+<summary>
+The F7 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F6">
+<summary>
+The F6 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F5">
+<summary>
+The F5 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F4">
+<summary>
+The F4 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F3">
+<summary>
+The F3 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F2">
+<summary>
+The F2 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F1">
+<summary>
+The F1 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Divide">
+<summary>
+除算記号 (/) キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Decimal">
+<summary>
+小数点キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Subtract">
+<summary>
+減算記号 (-) キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Separator">
+<summary>
+区切り記号キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Add">
+<summary>
+Add キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Multiply">
+<summary>
+乗算記号 (*) キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad9">
+<summary>
+The 9 key on the numeric keypad.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad8">
+<summary>
+The 8 key on the numeric keypad.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad7">
+<summary>
+数値キーパッドの 7 キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad6">
+<summary>
+数値キーパッドの 6 キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad5">
+<summary>
+数値キーパッドの 5 キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad4">
+<summary>
+数値キーパッドの 4 キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad3">
+<summary>
+数値キーパッドの 3 キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad2">
+<summary>
+数値キーパッドの 2 キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad1">
+<summary>
+The 1 key on the numeric keypad.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.NumPad0">
+<summary>
+The 0 key on the numeric keypad.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Sleep">
+<summary>
+コンピューターのスリープ キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Apps">
+<summary>
+アプリケーション キー (Microsoft Natural Keyboard)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.RWin">
+<summary>
+右の Windows ロゴ キー (Microsoft Natural Keyboard)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LWin">
+<summary>
+左の Windows ロゴ キー (Microsoft Natural Keyboard)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Z">
+<summary>
+Z キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Y">
+<summary>
+Y キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.X">
+<summary>
+X キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.W">
+<summary>
+W キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.V">
+<summary>
+V キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.U">
+<summary>
+U キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.T">
+<summary>
+T キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.S">
+<summary>
+S キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.R">
+<summary>
+R キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Q">
+<summary>
+Q キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.P">
+<summary>
+P キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.O">
+<summary>
+O キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.N">
+<summary>
+N キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.M">
+<summary>
+M キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.L">
+<summary>
+L キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.K">
+<summary>
+K キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.J">
+<summary>
+J キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.I">
+<summary>
+I キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.H">
+<summary>
+H キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.G">
+<summary>
+G キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.F">
+<summary>
+F キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.E">
+<summary>
+E キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D">
+<summary>
+D キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.C">
+<summary>
+C キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.B">
+<summary>
+B キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.A">
+<summary>
+A キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D9">
+<summary>
+The 9 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D8">
+<summary>
+The 8 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D7">
+<summary>
+The 7 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D6">
+<summary>
+The 6 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D5">
+<summary>
+The 5 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D4">
+<summary>
+The 4 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D3">
+<summary>
+The 3 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D2">
+<summary>
+The 2 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D1">
+<summary>
+The 1 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.D0">
+<summary>
+The 0 key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Help">
+<summary>
+The HELP key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Delete">
+<summary>
+The DEL key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Insert">
+<summary>
+The INS key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Snapshot">
+<summary>
+PrintScreen キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.PrintScreen">
+<summary>
+PrintScreen キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Execute">
+<summary>
+Execute キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Print">
+<summary>
+Print キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Select">
+<summary>
+Select キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Down">
+<summary>
+↓ キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Right">
+<summary>
+→ キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Up">
+<summary>
+↑ キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Left">
+<summary>
+← キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Home">
+<summary>
+The HOME key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.End">
+<summary>
+The END key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.PageDown">
+<summary>
+The PAGE DOWN key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Next">
+<summary>
+The PAGE DOWN key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.PageUp">
+<summary>
+PageUp キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Prior">
+<summary>
+PageUp キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Space">
+<summary>
+Space キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.IMEModeChange">
+<summary>
+IME モード変更キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.IMEAccept">
+<summary>
+IME Accept キー (System.Windows.Forms.Keys.IMEAceept の代わりに使用します)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.IMEAceept">
+<summary>
+IME Accept キー互換性を維持するために残されています。代わりに System.Windows.Forms.Keys.IMEAccept
+を使用してください。
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.IMENonconvert">
+<summary>
+IME 無変換キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.IMEConvert">
+<summary>
+IME 変換キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Escape">
+<summary>
+The ESC key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.HanjaMode">
+<summary>
+IME Hanja モード キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.KanjiMode">
+<summary>
+IME 漢字モード キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.FinalMode">
+<summary>
+IME Final モード キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.JunjaMode">
+<summary>
+IME Junja モード キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.HangulMode">
+<summary>
+IME ハングル モード キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.HanguelMode">
+<summary>
+IME ハングル モード キー(互換性を保つために保持されています。HangulMode を使用します)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.KanaMode">
+<summary>
+IME かなモード キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Capital">
+<summary>
+The CAPS LOCK key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.CapsLock">
+<summary>
+The CAPS LOCK key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Pause">
+<summary>
+Pause キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Menu">
+<summary>
+Alt キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.ControlKey">
+<summary>
+The CTRL key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.ShiftKey">
+<summary>
+Shift キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Return">
+<summary>
+Return キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Enter">
+<summary>
+Enter キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Clear">
+<summary>
+Clear キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LineFeed">
+<summary>
+ライン フィード キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Tab">
+<summary>
+The TAB key.
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Back">
+<summary>
+BackSpace キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.XButton2">
+<summary>
+x マウスの 2 番目のボタン (5 ボタン マウスの場合)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.XButton1">
+<summary>
+x マウスの 1 番目のボタン (5 ボタン マウスの場合)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.MButton">
+<summary>
+マウスの中央ボタン (3 ボタン マウスの場合)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.Cancel">
+<summary>
+Cancel キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.RButton">
+<summary>
+マウスの右ボタン
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.LButton">
+<summary>
+マウスの左ボタン
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.Keys.None">
+<summary>
+キー入力なし
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseButtons.XButton2">
+<summary>
+2 番目の XButton が押されました。
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseButtons.XButton1">
+<summary>
+1 番目の XButton が押されました。
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseButtons.Middle">
+<summary>
+マウスの中央ボタンが押されました。
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseButtons.Right">
+<summary>
+マウスの右ボタンが押されました。
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseButtons.Left">
+<summary>
+マウスの左ボタンが押されました。
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseButtons.None">
+<summary>
+マウス ボタンは押されていません。
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:KeyInputViewr.Core.MouseButtons">
+<summary>
+ マウスボタン
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseWheel.Left">
+<summary>
+ 左にホイール
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseWheel.Bottom">
+<summary>
+ 下にホイール
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseWheel.Rigth">
+<summary>
+ 右にホイール
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseWheel.Top">
+<summary>
+ 上にホイール
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.KeyInputViewr.Core.MouseWheel.None">
+<summary>
+ ホイールなし
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:KeyInputViewr.Core.MouseWheel">
+<summary>
+ マウスホイール
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:KeyInputViewr.Core.GlobalHook.MouseHookProc(System.Int32,System.IntPtr,System.IntPtr)">
+<summary>
+#endregion
+#region マウスフック関連
+マウスのコールバック関数
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:KeyInputViewr.Core.GlobalHook.KeyboardHookProc(System.Int32,System.IntPtr,System.IntPtr)">
+<summary>
+#region キーボードフック関連
+キーボードフックのコールバック関数
+</summary>
+</member>
+<member name="M:KeyInputViewr.Core.GlobalHook.onKeyboardMouseHookEvent(KeyInputViewr.Core.KeyMouseType)">
+<summary>
+ フックイベントを発行する。
+</summary>
+</member>
+<member name="M:KeyInputViewr.Core.GlobalHook.checkFilter">
+<summary>
+ フィルターからフックイベントを発行するかを判断する。（無駄が多いかも？）
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.GlobalHook.Filter">
+<summary>
+ フックフィルターを取得または設定する。
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.GlobalHook.KeyMouseEvent">
+<summary>
+ キーマウスイベント
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.GlobalHook._keymouseEvent">
+<summary>
+ キーマウスイベント
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.GlobalHook._args">
+<summary>
+ キーマウス情報
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.GlobalHook.m_hook">
+<summary>
+ Mouseフックポインタ
+</summary>
+</member>
+<member name="P:KeyInputViewr.Core.GlobalHook.k_hook">
+<summary>
+ Keyboardフックポインタ
+</summary>
+</member>
+<member name="T:KeyInputViewr.Core.GlobalHook">
+<summary>
+ キーとマウスのフック
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:KeyInputViewr.Core.WindowsAPI.LowLevelProc">
+ <summary>
+ SetWindowsHookEx 関数と共に使われる、アプリケーション定義またはライブラリ定義のコールバック関数です。新しいキーボード入力イベントをスレッドの入力キューへポストしようとするときに、システムは必ずこのフックプロシージャを呼び出します。キーボード入力を発生させるのは、ローカルのキーボードドライバまたは、 関数です。keybd_event を呼び出した場合、キー入力がエミュレートされ、特定のキーを押したのと同様のイベントが発生します。
+ HOOKPROC 型は、このコールバック関数へのポインタを定義します。LowLevelKeyboardProc or LowLevelMouseProc はアプリケーション定義またはライブラリ定義の関数名のプレースホルダであり、実際にこの関数名を使う必要はありません。
+ </summary>
+ <param name="nCode">nCode パラメータの値が 0 未満の場合、このフックプロシージャはメッセージを処理せずにそのメッセージを CallNextHookEx 関数へ渡し、その関数の戻り値を返さなければなりません。</param>
+ <param name="wParam">メッセージの識別子を指定します。このパラメータで、、、、 のいずれかのメッセージを指定します。</param>
+ <param name="lParam">1個の構造体へのポインタを指定します。</param>
+ <returns>
+ nCode パラメータの値が 0 未満の場合、このフックプロシージャは CallNextHookEx 関数を呼び出し、その関数の戻り値を返さなければなりません。
+ nCode パラメータの値が 0 以上で、このフックプロシージャがメッセージを処理しなかった場合も、CallNextHookEx 関数を呼び出し、その関数の戻り値を返すことを強く推奨します。CallNextHookEx 関数を呼び出さないと、WH_KEYBOARD_LL フックをインストールしたほかのアプリケーションがフックの通知を受け取れず、誤動作する可能性があります。nCode パラメータの値が 0 以上で、このフックプロシージャがメッセージを処理した場合、0 以外の値を返すと、フックチェーン内の残りのフックプロシージャや目的のウィンドウプロシージャへメッセージを渡すことを防止できます。
+ </returns>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.MSLLHOOKSTRUCT.dwExtraInfo">
+<summary>
+メッセージの拡張情報らしい
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.MSLLHOOKSTRUCT.time">
+<summary>
+不明
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.MSLLHOOKSTRUCT.flags">
+<summary>
+特殊キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.MSLLHOOKSTRUCT.mouseData">
+<summary>
+マウスキー情報
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.MSLLHOOKSTRUCT.pt">
+<summary>
+スクリーン座標
+</summary>
+</member>
+<member name="T:KeyInputViewr.Core.WindowsAPI.MSLLHOOKSTRUCT">
+<summary>
+ マウスフック情報
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:KeyInputViewr.Core.WindowsAPI.POINT">
+<summary>
+ マウスポインタのスクリーン座標
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.KBDLLHOOKSTRUCT.dwExtraInfo">
+<summary>
+メッセージの拡張情報らしい
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.KBDLLHOOKSTRUCT.time">
+<summary>
+不明
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.KBDLLHOOKSTRUCT.flags">
+<summary>
+特殊キー
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.KBDLLHOOKSTRUCT.scanCode">
+<summary>
+スキャンコード (使い方不明)
+</summary>
+</member>
+<member name="F:KeyInputViewr.Core.WindowsAPI.KBDLLHOOKSTRUCT.vkCode">
+<summary>
+仮想キーコード
+</summary>
+</member>
+<member name="T:KeyInputViewr.Core.WindowsAPI.KBDLLHOOKSTRUCT">
+<summary>
+ キーボードフック情報
+</summary>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetForegroundProcess">
+<summary>
+ フォアグラウンドのプロセスを取得
+</summary>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetForegroundWindowText">
+<summary>
+#endregion
+#endregion
+ フォアグラウンドのウィンドウタイトル名を取得
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:KeyInputViewr.Core.WindowsAPI.XBUTTON1">
+<summary>
+#endregion
+#region マウス拡張キーメッセージ
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:KeyInputViewr.Core.WindowsAPI.WM_MOUSEFIRST">
+<summary>
+#endregion
+#region マウスメッセージ
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:KeyInputViewr.Core.WindowsAPI.WM_KEYFIRST">
+<summary>
+#endregion
+#region キーメッセージ
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:KeyInputViewr.Core.WindowsAPI.HC_ACTION">
+<summary>
+#endregion
+#region Hook Codes
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:KeyInputViewr.Core.WindowsAPI.WH_KEYBOARD_LL">
+<summary>
+#region メッセージ定義
+#region Hook Codes
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetModule">
+ <summary>指定したモジュールのインスタンスハンドルを返します。</summary>
+ <param name="t">型</param>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.toMSLLHOOKSTRUCT(System.IntPtr)">
+ <summary>nativeintをKBDLLHOOKSTRUCTに変換</summary>
+ <param name="ptr">構造体のアンマネージポインタ</param>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.toKBDLLHOOKSTRUCT(System.IntPtr)">
+ <summary>nativeintをKBDLLHOOKSTRUCTに変換</summary>
+ <param name="ptr">構造体のアンマネージポインタ</param>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.toStructure``1(System.IntPtr)">
+ <summary>nativeintを構造体に変換</summary>
+ <remarks>最も遅いやり方</remarks>
+ <typeparam name="'T">構造体の型</typeparam>
+ <param name="ptr">構造体のアンマネージポインタ</param>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.ToAscii(System.UInt32,System.UInt32,System.Byte[],System.Byte[],System.UInt32)">
+ <summary>
+ 指定された仮想キーコードおよびキーボード状態を、対応する単数または複数の文字に変換します。関数は、与えられたキーボードレイアウトハンドルで識別される入力言語と物理キーボードレイアウトを使い、コードを変換します。
+ 与えられたコードを変換するために使うキーボードレイアウトのハンドルを指定するには、ToAsciiEx 関数を使います。
+ </summary>
+ <param name="uVirtKey">変換する仮想キーコードを指定します。</param>
+ <param name="uScanCode">変換するキーのハードウェアスキャンコードを指定します。キーが上がっている（押されていない）場合、この値の上位ビットがセットされます。</param>
+ <param name="lpKeyState">
+ 現在のキーボード状態が入る、256 バイトの配列へのポインタを指定します。配列の各要素（バイト）には、１つのキーの状態が入ります。バイトの上位ビットがセットされている場合、キーは下がって（押されて）います。
+ 下位ビットがセットされている場合、キーはオンに切り替えられていることを表します。この関数では、CAPS LOCK キーのトグルビットだけが有効です。NUM LOCK キーおよび SCROLL LOCK キーのトグル状態は無視されます。
+ </param>
+ <param name="lpChar">変換された単数または複数の文字を受けるバッファへのポインタを指定します。</param>
+ <param name="uFlags">メニューがアクティブかどうかを指定します。このパラメータには、メニューがアクティブの場合は 1、アクティブでない場合は 0 を指定してください。</param>
+ <returns>指定されたキーがデッドキーの場合、負の値が戻ります。それ以外の場合、次の値のいずれかが返ります。</returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetKeyboardState(System.Byte[])">
+ <summary>256 個の仮想キーの状態を、指定されたバッファへコピーします。</summary>
+ <param name="lpKeyState">［入力］すべての仮想キーの状態を保持する 256 バイトの配列へのポインタを指定します。</param>
+ <returns>
+ 関数が成功すると、0 以外の値が返ります。
+ 関数が失敗すると、0 が返ります。拡張エラー情報を取得するには、関数を使います。
+ </returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetWindowThreadProcessId(System.IntPtr,System.Int32@)">
+ <summary>
+ 指定されたウィンドウを作成したスレッドの ID を取得します。
+ 必要であれば、ウィンドウを作成したプロセスの ID も取得できます。
+ </summary>
+ <param name="hWnd">ウィンドウのハンドルを指定します。</param>
+ <param name="lpdwProcessId">
+ プロセス ID を受け取る変数へのポインタを指定します。
+ ポインタを指定すると、それが指す変数にプロセス ID がコピーされます。
+ NULL を指定した場合は、プロセス ID の取得は行われません。
+ </param>
+ <returns>ウィンドウを作成したスレッドの ID が返ります。</returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetWindowTextLength(System.IntPtr)">
+ <summary>指定されたウィンドウのタイトルバーテキストの文字数を返します（ そのウィンドウがタイトルバーを持つ場合）。指定したウィンドウがコントロールの場合は、コントロール内のテキストの文字数を返します。ただし、GetWindowTextLength 関数で他のアプリケーションのエディットコントロールのテキストの長さを取得することはできません。</summary>
+ <param name="hWnd">ウィンドウ（ またはテキストを持つコントロール）のハンドルを指定します。</param>
+ <returns>
+ 関数が成功すると、テキストの文字数が返ります。特定の条件の下では、実際のテキスト長よりも大きくなります。詳細については、解説を参照してください。
+ ウィンドウがテキストを持たない場合は、0 が返ります。拡張エラー情報を取得するには、 関数を使います。
+ </returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetWindowText(System.IntPtr,System.Text.StringBuilder,System.Int32)">
+ <summary>指定されたウィンドウのタイトルバーのテキストをバッファへコピーします。指定されたウィンドウがコントロールの場合は、コントロールのテキストをコピーします。ただし、他のアプリケーションのコントロールのテキストを取得することはできません。</summary>
+ <param name="hWnd">ウィンドウ（ またはテキストを持つコントロール）のハンドルを指定します。</param>
+ <param name="lpString">バッファへのポインタを指定します。このバッファにテキストが格納されます。</param>
+ <param name="nMaxCount">バッファにコピーする文字の最大数を指定します。テキストのこのサイズを超える部分は、切り捨てられます。NULL 文字も数に含められます。</param>
+ <returns>
+ 関数が成功すると、コピーされた文字列の文字数が返ります（ 終端の NULL 文字は含められません）。タイトルバーやテキストがない場合、タイトルバーが空の場合、および hWnd パラメータに指定したウィンドウハンドルまたはコントロールハンドルが無効な場合は 0 が返ります。拡張エラー情報を取得するには、 関数を使います。
+ 他のアプリケーションのエディットコントロールのテキストをこの関数で取得することはできません。
+ </returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetForegroundWindow">
+ <summary>
+ フォアグラウンドウィンドウ（ 現在ユーザーが作業しているウィンドウ）のハンドルを返します。
+ Windows システムは、フォアグラウンドウィンドウを生成したスレッドに対して、
+ 他のスレッドよりも若干高い優先順位を割り当てます。
+ </summary>
+ <returns>
+ フォアグラウンドウィンドウのハンドルが返ります。
+ フォアグラウンドウィンドウのハンドルは、
+ ウィンドウがフォーカスを失ったなどの特定の状況下で NULL になる場合もあります。
+ </returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.UnhookWindowsHookEx(System.IntPtr)">
+ <summary>SetWindowsHookEx 関数を使ってフックチェーン内にインストールされたフックプロシージャを削除します。</summary>
+ <param name="hhk">
+ 削除対象のフックプロシージャのハンドルを指定します。
+ このハンドルは、以前に SetWindowsHookEx 関数を呼び出したときに取得したフックのハンドルです。</param>
+ <returns>
+ 関数が成功すると、0 以外の値が返ります。
+ 関数が失敗すると、0 が返ります。拡張エラー情報を取得するには、関数を使います。
+ </returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+ <summary>現在のフックチェーン内の次のフックプロシージャに、フック情報を渡します。フックプロシージャは、フック情報を処理する前でも、フック情報を処理した後でも、この関数を呼び出せます。</summary>
+ <param name="hhk">現在のフックのハンドルを指定します。アプリケーションは、SetWindowsHookEx 関数を呼び出した際に取得したハンドルを指定します。</param>
+ <param name="nCode">現在のフックプロシージャに渡されたフックコードを指定します。次のフックプロシージャはこのフックコードを使って、フック情報の処理方法を決定します。</param>
+ <param name="wParam">現在のフックプロシージャに渡された wParam 値を指定します。このパラメータの意味は、現在のフックチェーンに関連付けられているフックタイプに依存します。</param>
+ <param name="lParam">現在のフックプロシージャに渡された lParam 値を指定します。このパラメータの意味は、現在のフックチェーンに関連付けられているフックタイプに依存します。</param>
+ <returns>
+ 関数が成功すると、0 以外の値が返ります。
+ 関数が失敗すると、0 が返ります。拡張エラー情報を取得するには、関数を使います。
+ </returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.SetWindowsHookEx(System.Int32,KeyInputViewr.Core.WindowsAPI.LowLevelProc,System.IntPtr,System.UInt32)">
+ <summary>アプリケーション定義のフックプロシージャをフックチェーン内にインストールします。フックプロシージャをインストールすると、特定のイベントタイプを監視できます。監視の対象になるイベントは、特定のスレッド、または呼び出し側スレッドと同じデスクトップ内のすべてのスレッドに関連付けられているものです。</summary>
+ <param name="idHook">インストール対象のフックタイプを指定します。次の値のいずれかを指定します。</param>
+ <param name="lpfn">フックプロシージャへのポインタを指定します。dwThreadID パラメータで 0、またはほかのプロセスが作成したスレッドの識別子を指定した場合、lpfn パラメータで、ダイナミックリンクライブラリ（DLL）内に存在するフックプロシージャへのポインタを指定しなければなりません。それ以外の場合、現在のプロセスに関連付けられているコード内に存在するフックプロシージャへのポインタを指定できます。</param>
+ <param name="hMod">lpfn パラメータが指すフックプロシージャを保持している DLL のハンドルを指定します。dwThreadId パラメータが、現在のプロセスが作成したスレッドを指定していて、フックプロシージャが現在のプロセスに関連付けられているコード内に存在する場合、hMod パラメータで NULL を指定しなければなりません。</param>
+ <param name="dwThreadId">フックプロシージャを関連付けるべきスレッドの識別子を指定します。0 を指定すると、フックプロシージャは、呼び出し側スレッドと同じデスクトップ内で動作している既存のすべてのスレッドに関連付けられます。</param>
+ <returns>
+ 関数が成功すると、フックプロシージャのハンドルが返ります。
+ 関数が失敗すると、NULL が返ります。拡張エラー情報を取得するには、 関数を使います。
+ </returns>
+</member>
+<member name="M:KeyInputViewr.Core.WindowsAPI.GetModuleHandle(System.String)">
+ <summary>呼び出し側プロセスのアドレス空間に該当ファイルがマップされている場合、指定されたモジュール名のモジュールハンドルを返します。</summary>
+ <param name="lpModuleName">
+ ［入力］モジュール（.DLL または .EXE ファイル）の名前を保持する、NULL で終わる文字列へのポインタを指定します。拡張子を記述しなかった場合は、既定で「.DLL」が追加されます。文字列の最後に「.」を記述すると、拡張子なしのモジュール名になります。文字列には、パスを指定しなくてもかまいません。パスを指定する場合は、スラッシュ（/）ではなく円記号（\）で区切ってください。指定されたモジュール名を、呼び出し側プロセスのアドレス空間に現在マップされているモジュール名と比較します（ 大文字と小文字を区別しません）。
+ NULL を指定すると、呼び出し側プロセスの作成に使われたファイルのハンドルが返ります。
+ </param>
+ <returns>
+ 関数が成功すると、フックプロシージャのハンドルが返ります。
+ 関数が失敗すると、NULL が返ります。拡張エラー情報を取得するには、 関数を使います。
+ </returns>
+</member>
+<member name="T:KeyInputViewr.Core.WindowsAPI">
+<summary>
+ KeyHookに関するWindowsAPIの定義
+</summary>
+</member>
+</members>
+</doc>
