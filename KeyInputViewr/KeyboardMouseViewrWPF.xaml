@@ -4,7 +4,8 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     Title="KeyboardMouseViewr for WPF" Name="KeyboardMouseViewrWPF"
     Height="260" Width="1075"
-    ResizeMode="NoResize" WindowStyle="None" Visibility="Visible">
+    ResizeMode="NoResize" WindowStyle="None" Visibility="Visible"
+    AllowsTransparency="True" Background="Transparent">
 
     <Window.Resources>
         <Style x:Key="_BorderStyle" TargetType="{x:Type Border}">
@@ -48,7 +49,8 @@
         </Style>
     </Window.Resources>
 
-    <Grid Background="Silver">
+    <!--<Grid Background="Silver">-->
+    <Grid Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="15" />

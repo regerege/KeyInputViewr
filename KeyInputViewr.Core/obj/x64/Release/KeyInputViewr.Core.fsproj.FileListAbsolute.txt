@@ -1,6 +1,0 @@
-D:\develop\develop\fsharp\KeyInputViewr\KeyInputViewr.Core\bin\Release\KeyInputViewr.Core.XML
-D:\develop\develop\fsharp\KeyInputViewr\KeyInputViewr.Core\bin\Release\KeyInputViewr.Core.dll
-D:\develop\develop\fsharp\KeyInputViewr\KeyInputViewr.Core\bin\Release\KeyInputViewr.Core.pdb
-D:\develop\develop\fsharp\KeyInputViewr\KeyInputViewr.Core\obj\x64\Release\ResolveAssemblyReference.cache
-D:\develop\develop\fsharp\KeyInputViewr\KeyInputViewr.Core\obj\x64\Release\KeyInputViewr.Core.dll
-D:\develop\develop\fsharp\KeyInputViewr\KeyInputViewr.Core\obj\x64\Release\KeyInputViewr.Core.pdb
