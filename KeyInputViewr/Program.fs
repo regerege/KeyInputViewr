@@ -12,9 +12,14 @@ let wpf = new KeyboardMouseViewrWPF()
 
 printfn "キーフックスタート"
 // フィルターの追加
-GlobalHook.Filter <- None
-//    Some
-//        <| new HookFilterEvent(fun () -> [HookFilter.ProcessName "devenv"])
+GlobalHook.Filter <-
+    Some
+        <| new HookFilterEvent(fun () ->
+            [
+                HookFilter.ProcessName "devenv"
+                HookFilter.ProcessName "NiconamaCommentViewer"
+                HookFilter.ProcessName "KeyInputViewr"
+            ])
 
 // イベントの追加
 GlobalHook.KeyMouseEvent.Add(fun x ->
@@ -33,6 +38,7 @@ GlobalHook.KeyMouseEvent.Add(fun x ->
     |> Seq.iter(fun (n,c) ->
         let b = x.Wheel &&& enum<MouseWheel> n <> MouseWheel.None
         c.Visibility <- wpf.GetImageVisible b)
+
 )
 
 #if COMPILED

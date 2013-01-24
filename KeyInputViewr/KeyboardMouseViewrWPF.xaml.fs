@@ -53,3 +53,4 @@ type KeyboardMouseViewrWPF() =
     member w.GetButtonStyle b = if b then _pushedStyle else _defaultStyle
     /// イメージのON/OFF判定時のVisibilityを取得する。
     member w.GetImageVisible b = if b then Visibility.Visible else Visibility.Hidden
+
